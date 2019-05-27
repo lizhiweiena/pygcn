@@ -12,6 +12,11 @@ import torch.optim as optim
 from pygcn.utils import load_data, accuracy
 from pygcn.models import GCN
 
+import os
+
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
+
 # Training settings
 parser = argparse.ArgumentParser()
 parser.add_argument('--no-cuda', action='store_true', default=False,
